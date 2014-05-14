@@ -1,0 +1,56 @@
+{
+  "comment": "Octodex",
+  "invited": [
+    {
+      "fullName": "the Mardigrastocat",
+      "urlToken": "mardigrastocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 1
+    },
+    {
+      "fullName": "the Kimonotocat",
+      "urlToken": "kimonotocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 2
+    },
+    {
+      "fullName": "the Skitchtocat",
+      "urlToken": "skitchtocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 3
+    }
+  ],
+  "recommended": [
+    {
+      "fullName": "the Droidtocat",
+      "urlToken": "droidtocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 4
+    },
+    {
+      "fullName": "the Goretocat",
+      "urlToken": "goretocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 5
+    },
+    {
+      "fullName": "the FIRSTocat",
+      "urlToken": "firstocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 6
+    },
+    {
+      "fullName": "the Professortocat",
+      "urlToken": "professortocat",
+      "avatarPath": "http://placekitten.com/36/36",
+      "bio": "Octodex",
+      "id": 7
+    }
+  ]
+}

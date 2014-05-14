@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>  
+
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>invite panel</title>  
+
+    <link rel="stylesheet" href="stylesheets/style.css">  
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="javascripts/app.js"></script> 
+
+</head>  
+<body>
+    <div id="container">
+        <div class="panel" ng-controller="InviteCtrl">
+            <div>
+                <input type="text" placeholder="搜素你想邀请的人" class="search" />
+
+                <!-- 根据已邀请人数分类组织语句 -->
+                <span class="desc" ng-if="data.invited.length > 2">
+                    您已邀请<a href="{{data.invited[0].urlToken}}">{{data.invited[0].fullName}}</a>、<a href="{{data.invited[1].urlToken}}">{{data.invited[1].fullName}}</a>等<span>{{data.invited.length}}</span>人
+                </span>
+                <span class="desc" ng-if="data.invited.length == 2">
+                    您已邀请<a href="{{data.invited[0].urlToken}}">{{data.invited[0].fullName}}</a>、<a href="{{data.invited[1].urlToken}}">{{data.invited[1].fullName}}</a>
+                </span>
+                <span class="desc" ng-if="data.invited.length == 1">
+                    您已邀请<a href="{{data.invited[0].urlToken}}">{{data.invited[0].fullName}}</a>
+                </span>
+                <span class="desc" ng-if="data.invited.length == 0">
+                    快邀请人来回答你的问题吧！
+                </span>
+
+            </div>
+
+            <div>
+                <h3>推荐人选</h3>
+
+                <ul class="user-list">
+                    <li ng-repeat="user in users | orderBy:'id'">
+                        <img ng-src="{{user.avatarPath}}" />
+                        <div>
+                            <a href="{{user.urlToken}}">{{user.fullName}}</a>
+                            <span>{{user.bio}}</span>
+                        </div>
+                        
+                        <!-- 判断是否已邀请，分两种情况 -->
+                        <a ng-if="user.invited" data-id="{{user.id}}" ng-click="trigger_invite($event.target)" class="btn-undo">
+                            收回邀请
+                        </a>
+                        <a ng-if="!user.invited" data-id="{{user.id}}" ng-click="trigger_invite($event.target)" class="btn-do">
+                            邀请回答
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>  
+    
+</html>
+
+
+    
