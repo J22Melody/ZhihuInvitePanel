@@ -1,0 +1,4 @@
+index.html是入口文件
+已用compass把scss编译成css
+angularjs负责动态绑定
+放在服务器环境下跑哈，不然跨域的json取不到
